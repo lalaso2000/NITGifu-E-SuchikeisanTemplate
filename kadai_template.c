@@ -1,14 +1,17 @@
-// 数値計算　テンプレート
+// 数値計算 テンプレート
 // autor : lalaso2000
-// キーボードから行列を取得し、標準出力へ出力できます
-// 使い方はmain関数やREADME参照
-// サンプルとして、1回目の課題が書いてあります。
+// 行列やベクトルの入力、出力が実装済みです
+// 詳しい使い方はREADME.mdを参照
+// サンプルとして、1回目の課題が書いてあります
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
+// 定数=================================================================
 #define N 3     // N次行列
+// 定数ここまで=========================================================
+
 
 // 行列の領域確保
 double **dmatrix(int nr1, int nr2, int nl1, int nl2);
@@ -29,8 +32,10 @@ void print_dvector(double *b, int i, int j);
 void free_dvector(double *b, int i, int j);
 
 
-// メイン関数
-int main(){
+//=====================================================================
+//  main関数
+//=====================================================================
+int main(void){
     double **a;     // 行列を使う場合はアスタリスクを二つ
     double *b;      // ベクトルを使う場合はアスタリスクを一つ
 
@@ -38,9 +43,9 @@ int main(){
     double tmp;     // 計算用変数
     double *ans;    // A・bの答えを代入
 
+
     /* ======行列の使い方====== */
     // 各関数では、行の添字がnr1~nr2であること、列の添字がnl1~nl2であることを指定する必要があります。
-    // ex) 行の添字が1~3、列の添字が1~2の3×2行列を使う場合、「dmatrix(1,3,1,2);」となります。
     // 1.行列の領域を確保(行の添字が1~N、列の添字が1~N)
     a = dmatrix(1, N, 1, N);
     // 2.行列を入力
@@ -50,9 +55,9 @@ int main(){
     print_dmatrix(a, 1, N, 1, N);
     printf("\n");
 
+
     /* ======ベクトルの使い方====== */
     // 各関数では、添字がi~jであることを指定する必要があります。
-    // ex) 添字が2~5の4次元ベクトルを使う場合、「dvector(2,5);」となります。
     // 1.ベクトルの領域を確保(添字が1~N)
     b = dvector(1, N);
     // 2.ベクトルを入力
@@ -61,6 +66,11 @@ int main(){
     printf("\n======ベクトルb======\n");
     print_dvector(b, 1, N);
     printf("\n");
+
+
+
+    /* ======以下、サンプルとして1回目の課題の解法====== */
+    // この辺をいじって課題を解決してください
 
     // ansのベクトル領域を確保
     ans = dvector(1, N);
@@ -77,6 +87,9 @@ int main(){
     printf("======A・bの結果======\n");
     print_dvector(ans, 1, N);
 
+
+
+    /* ======行列・ベクトルを使ったら必ずメモリ解放をしてください！====== */
     // 行列・ベクトルの領域を解放
     free_dmatrix(a, 1, N, 1, N);
     free_dvector(b, 1, N);
@@ -84,7 +97,16 @@ int main(){
 
     return 0;
 }
+//=====================================================================
+//  main関数 ここまで
+//=====================================================================
 
+
+
+
+//=====================================================================
+//  この先は各種関数の定義
+//=====================================================================
 // キーボードから行列を取得
 // [nr1][nl1] ~ [nr2][nl2]までの要素を入力
 void key_input_dmatrix(double **a, int nr1, int nr2, int nl1, int nl2){
@@ -99,6 +121,7 @@ void key_input_dmatrix(double **a, int nr1, int nr2, int nl1, int nl2){
     }
 }
 
+
 // キーボードからベクトルを取得
 // [i] ~ [j]までの要素を入力
 void key_input_dvector(double *b, int i, int j){
@@ -110,6 +133,7 @@ void key_input_dvector(double *b, int i, int j){
         scanf("%lf", &b[k]);
     }
 }
+
 
 // 行列を出力
 // [nr1][nl1] ~ [nr2][nl2]までの要素を出力
@@ -123,6 +147,7 @@ void print_dmatrix(double **a, int nr1, int nr2, int nl1, int nl2){
     }
 }
 
+
 // ベクトルを出力
 // [i] ~ [j]までの要素を入力
 void print_dvector(double *b, int i, int j){
@@ -131,6 +156,7 @@ void print_dvector(double *b, int i, int j){
         printf("%.3f\n", b[k]);
     }
 }
+
 
 // 行列の領域確保
 // [nr1][nl1] ~ [nr2][nl2]までを確保
@@ -159,6 +185,7 @@ double **dmatrix(int nr1, int nr2, int nl1, int nl2){
     return a;
 }
 
+
 // 行列の領域解放
 // [nr1][nl1] ~ [nr2][nl2]までを解放
 void free_dmatrix(double **a, int nr1, int nr2, int nl1, int nl2){
@@ -170,6 +197,7 @@ void free_dmatrix(double **a, int nr1, int nr2, int nl1, int nl2){
     }
     free((void *)(a + nr1));
 }
+
 
 // ベクトルの領域確保
 // [i] ~ [j]までを確保
@@ -183,6 +211,7 @@ double *dvector(int i, int j){
 
     return b - i;
 }
+
 
 // ベクトルの領域解放
 // [i] ~ [j]までを解放
