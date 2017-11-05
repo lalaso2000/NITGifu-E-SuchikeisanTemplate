@@ -29,7 +29,7 @@
     - 各自解決方法は調べてください
 
 ## お家でC言語を書く方法
-- [paiza.io](https://paiza.io/ja)が有能です。
+- <a href="https://paiza.io/ja" target="_blank">paiza.io</a>が有能です。
     1. 「コード作成を試してみる」
     1. 左上の緑のボタンをクリックして「C」を選択
     1. 黒い所にソースコードをコピペ
@@ -121,8 +121,8 @@
 
 ## 製作者
 - lalaso2000
-- 問題点があれば[#issue](https://github.com/lalaso2000/NITGifu-E-SuchikeisanTemplate/issues)までお知らせください。
+- 問題があれば<a href="https://github.com/lalaso2000/NITGifu-E-SuchikeisanTemplate/issues" target="_blank">#issue</a>までお知らせください。
 
 ## ライセンス
-- [Unlicense](https://choosealicense.com/licenses/unlicense/)
+- <a href="https://choosealicense.com/licenses/unlicense/" target="_blank">Unlicense</a>
     - 個人利用、商用利用、修正、配布、サブライセンスが認められます。
