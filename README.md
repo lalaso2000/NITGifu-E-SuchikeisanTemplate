@@ -2,12 +2,12 @@
 ## About
 - 数値計算の課題のテンプレートです。
 - 行列やベクトルの入出力を実装済みです。
-- main関数を書き換えて課題を解決してください。
+- `kadai\_template.c`のmain関数を書き換えて課題を解決してください。
 
 
 ## ダウンロード
 - [ここからzip形式でダウンロード出来ます。](https://github.com/lalaso2000/NITGifu-E-SuchikeisanTemplate/archive/master.zip)
-- あるいは、`Clone or download`の`Download ZIP`でダウンロードしてください
+- あるいは、`Clone or download`の`Download ZIP`でダウンロードしてください。
 
 
 ## 内容物
@@ -24,9 +24,14 @@
 - 隠しファイルなので人によっては見えないです。
 - github(このサイト)の管理用のファイルなので触らないでください。
 
+
 ## 注意点
+- Windowsで一部のソフトを使うと文字化けするかもしれません。
+    - メモ帳では化けないはずなのでそちらで
+    - VS Code等を使う場合は`utf-8`で開いてください
 - Visual Studioでは`fopen`や`scanf`がエラーします。
     - 各自解決方法は調べてください
+
 
 ## お家でC言語を書く方法
 - <a href="https://paiza.io/ja" target="_blank">paiza.io</a>が有能です。
@@ -36,6 +41,7 @@
     1. 下の方の「入力」と書いてあるところより下にscanfで入力する数字を予め入れておく。
     1. 「実行」を押す
     1. 結果が下の方に出てくる
+
 
 ## 各関数の使い方
 #### double **dmatrix(int nr1, int nr2, int nl1, int nl2);
@@ -119,9 +125,20 @@
 ```
 
 
+## Q&A
+- なんで作ったの？
+    - 教科書のプログラムがめちゃめちゃだったからです。
+- 教科書のプログラムは使えないの？
+    - 行列やベクトルの入出力以外の部分は教科書どおり動くように調整しています。
+- コピペして大丈夫なの？
+    - 先生の許可は取ってないです()
+    - 課題の本質の部分は自分で考えないといけない作りなので多分大丈夫。
+
+
 ## 製作者
 - lalaso2000
 - 問題があれば<a href="https://github.com/lalaso2000/NITGifu-E-SuchikeisanTemplate/issues" target="_blank">#issue</a>までお知らせください。
+
 
 ## ライセンス
 - <a href="https://choosealicense.com/licenses/unlicense/" target="_blank">Unlicense</a>
