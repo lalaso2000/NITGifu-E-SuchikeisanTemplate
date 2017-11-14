@@ -14,7 +14,8 @@
 ## About
 - 数値計算の課題のテンプレートです。
 - 行列やベクトルの入出力を実装済みです。
-- `kadai\_template.c`のmain関数を書き換えて課題を解決してください。
+- [python版はこちら](https://github.com/lalaso2000/NITGifu-E-SuchikeisanTemplate-python)
+- `kadai_template.c`のmain関数を書き換えて課題を解決してください。
 
 
 ## ダウンロード
@@ -152,7 +153,6 @@
 
 ## 製作者
 - lalaso2000
-- 問題があれば<a href="https://github.com/lalaso2000/NITGifu-E-SuchikeisanTemplate/issues" target="_blank">#issue</a>までお知らせください。
 
 
 ## ライセンス
